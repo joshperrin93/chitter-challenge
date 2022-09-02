@@ -19,7 +19,6 @@ class PostsRepository
 
             @posts << post
         end
-        binding.irb
         return @posts.sort_by! { |x| x.time_posted }.reverse
     end
 
