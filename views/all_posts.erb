@@ -1,6 +1,13 @@
 <http>
   <head></head>
   <body>
-    <h1>News feed</h1>
+    <h1>News Feed</h1>
+    <% @news_feed.each do |post| %>
+      <div>
+      <p><%= post.user_id %></p>
+      <p><%= post.message %></p>
+      <p><%= post.time_posted %></p>
+      </div>
+    <% end %>
   </body>
 </http>

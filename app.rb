@@ -14,6 +14,8 @@ class Application < Sinatra::Base
   end
 
   get '/posts' do
+    repo_post = PostsRepository.new
+    @news_feed = repo_post.all
     return erb(:all_posts)
   end
 
